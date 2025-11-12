@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-pulse-soft {
+    animation: pulse-soft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-in;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GreenPulse Design System */
+
+@layer base {
+  :root {
+    --background: 240 25% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 22% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 22% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 199 100% 64%;
+    --primary-foreground: 240 25% 12%;
+
+    --secondary: 270 30% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 15% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 150 60% 50%;
+    --accent-foreground: 240 25% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 15% 25%;
+    --input: 240 15% 25%;
+    --ring: 199 100% 64%;
+
+    --radius: 1rem;
+
+    /* Custom GreenPulse colors */
+    --green-glow: 150 60% 50%;
+    --green-soft: 160 55% 45%;
+    --blue-soft: 199 100% 64%;
+    --purple-deep: 270 30% 35%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(199 100% 64%) 0%, hsl(270 30% 35%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(240 22% 15%) 0%, hsl(240 15% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(150 60% 50%) 0%, hsl(199 100% 64%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsla(199, 100%, 64%, 0.15);
+    --shadow-glow: 0 0 30px hsla(150, 60%, 50%, 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 240 22% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 199 100% 64%;
+    --sidebar-primary-foreground: 240 25% 12%;
+    --sidebar-accent: 240 15% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 15% 25%;
+    --sidebar-ring: 199 100% 64%;
+  }
+
+  .dark {
+    --background: 240 25% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 22% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 22% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 199 100% 64%;
+    --primary-foreground: 240 25% 12%;
+
+    --secondary: 270 30% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 15% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 150 60% 50%;
+    --accent-foreground: 240 25% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 15% 25%;
+    --input: 240 15% 25%;
+    --ring: 199 100% 64%;
+
+    --sidebar-background: 240 22% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 199 100% 64%;
+    --sidebar-primary-foreground: 240 25% 12%;
+    --sidebar-accent: 240 15% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 15% 25%;
+    --sidebar-ring: 199 100% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
