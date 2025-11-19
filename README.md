@@ -44,7 +44,7 @@ Designed to be simple, inclusive, and accessible — with support for English, T
 ---
 
 🧱 Tech Stack
-- Frontend: Next.js (React)  
+- Frontend: typescript (React)  
 - Backend: Supabase (auth, journaling, rewards)  
 - AI Layer: GPT (eco tips, affirmations, literacy coach)  
 - Notifications: Firebase Cloud Messaging  
@@ -71,3 +71,4 @@ MIT License — free to use, adapt, and expand for community impact.
 - 🌍 Live Demo: green-pulse-mu.vercel.app  
 - 📄 Readme  
 - 📜 License: MIT  
+
